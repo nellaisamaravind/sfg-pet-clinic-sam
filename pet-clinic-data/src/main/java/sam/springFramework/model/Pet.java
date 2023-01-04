@@ -1,4 +1,4 @@
-package sam.springframework.sfgpetclinicsam.model;
+package sam.springFramework.model;
 
 import java.time.LocalDate;
 
