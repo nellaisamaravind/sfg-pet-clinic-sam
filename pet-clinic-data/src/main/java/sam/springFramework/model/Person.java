@@ -1,6 +1,6 @@
 package sam.springFramework.model;
 
-public class Person {   /* Base User Class - 0 */
+public class Person extends BaseEntity {   /* Base User Class - 1 */
 
     private String firstName;
     private String lastName;

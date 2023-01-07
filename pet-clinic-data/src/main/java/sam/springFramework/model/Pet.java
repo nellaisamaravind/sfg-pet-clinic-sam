@@ -2,7 +2,7 @@ package sam.springFramework.model;
 
 import java.time.LocalDate;
 
-public class Pet { /* Base class - 0 */
+public class Pet extends BaseEntity { /* Base Pet class - 1 */
     private PetType petType;
     private Owner owner;
     private LocalDate date; /* Java Class Java LocalDate class is an immutable class that

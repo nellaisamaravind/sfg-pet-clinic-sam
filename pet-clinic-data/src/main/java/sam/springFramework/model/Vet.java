@@ -1,5 +1,5 @@
 package sam.springFramework.model;
 
-public class Vet extends Person{ /* Inheritance - 1 */
+public class Vet extends Person{ /* Inheritance - 2 */
 
 }

@@ -1,4 +1,4 @@
 package sam.springFramework.model;
 
-public class Owner extends Person{ /* Inheritance - 1*/
+public class Owner extends Person{ /* Inheritance - 2*/
 }
