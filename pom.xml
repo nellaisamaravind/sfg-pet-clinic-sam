@@ -3,6 +3,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<!-- This project pom file - main pom file -->
+	<modules>
+		<module>pet-clinic-data</module>
+		<module>pet-clinic-web</module>
+	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -16,12 +20,14 @@
     <name>sfg-pet-clinic</name>
 	<description>sfg-pet-clinic</description>
 	<!-- And this project has 2 modules  -->
-    <modules>
-        <module>pet-clinic-data</module>
-        <module>pet-clinic-web</module>
-    </modules>
+
     <properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>17</java.version>
+		<jaxb.version>2.3.0</jaxb.version>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
 	</properties>
 	<dependencies>
 		<!--All Dependencies are moved to data and web module pom files , In Multi Module project the pom files should
@@ -42,7 +48,19 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId> <!--The release plugin vanthu main pom la irukanmu -->
+				<artifactId>maven-release-plugin</artifactId> <!--Don't need to mention the version for the release plugin ,
+				instead it takes from the apache version-->
+				<configuration>
+					<goals>install</goals>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
+	<scm>
+		<developerConnection>scm:git:cleahttps://github.com/nellaisamaravind/sfg-pet-clinic-sam.git</developerConnection>
+	</scm>
 
 </project>
+
